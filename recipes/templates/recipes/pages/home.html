@@ -7,14 +7,8 @@ cuidar caminho no settings no templates-dirs-->
 <!--Inserindo conteudo no bloco da pagina base-->
 {% block content %}
 <div class="main-content container main-content-list">
+     {% for recipe in recipes %}
     {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
-    {% include "recipes/partials/recipe.html" %}
+    {% endfor %}
 </div>
 {% endblock content %}
