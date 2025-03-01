@@ -4,7 +4,11 @@ WSGI config for projeto project.
 It exposes the WSGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
+<<<<<<< HEAD
 https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
+=======
+https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
+>>>>>>> c976c6b (Aula_62)
 """
 
 import os

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -10,6 +11,19 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+=======
+from django.contrib.auth.models import User
+from django.db import models
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=65)
+
+    def __str__(self):
+        return self.name
+
+
+>>>>>>> c976c6b (Aula_62)
 class Recipe(models.Model):
     title = models.CharField(max_length=65)
     description = models.CharField(max_length=165)
@@ -23,6 +37,7 @@ class Recipe(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
+<<<<<<< HEAD
     cover = models.ImageField(upload_to='recipes/cover/%Y/%m/%d/', blank=True, default='')
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null=True
@@ -31,3 +46,17 @@ class Recipe(models.Model):
     
     def __str__(self):
         return self.title
+=======
+    cover = models.ImageField(
+        upload_to='recipes/covers/%Y/%m/%d/', blank=True, default='')
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, null=True, blank=True,
+        default=None,
+    )
+    author = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True
+    )
+
+    def __str__(self):
+        return self.title
+>>>>>>> c976c6b (Aula_62)
