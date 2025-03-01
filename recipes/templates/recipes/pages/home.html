@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!--incluindo conteudo da pagina base
 cuidar caminho no settings no templates-dirs-->
 {% extends "global/base.html" %} 
@@ -13,16 +12,3 @@ cuidar caminho no settings no templates-dirs-->
     {% endfor %}
 </div>
 {% endblock content %}
-=======
-{% extends 'global/base.html' %}
-
-{% block title %}Home | {% endblock title %}
-
-{% block content %}
-<div class="main-content main-content-list container">
-    {% for recipe in recipes %}
-        {% include 'recipes/partials/recipe.html' %}
-    {% endfor %}
-</div>
-{% endblock content %}
->>>>>>> c976c6b (Aula_62)
